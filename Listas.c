@@ -9,18 +9,17 @@ void quicksort(int selecioneOperacao){
 
     int selecioneMetodo;
 
-    printf(" Qual È o tamanho da lista que deseja:");// digitar tamanho da lista
+    printf(" Qual √© o tamanho da lista que deseja:");// digitar tamanho da lista
     scanf("%d", &tamanho);
 
     int vetor[tamanho], aleatorio[tamanho];
 
-    srand(time(NULL));//gerar numeros aleatorios em funÁ„o do horario
+    srand(time(NULL));//gerar numeros aleatorios em fun√ß√£o do horario
 
     for(int i = 0; i < tamanho; i++){
-        vetor[i] = rand() % 100;// gerar numeros aleatorios em funÁ„o do tempo
+        vetor[i] = rand() % 100;// gerar numeros aleatorios em fun√ß√£o do tempo
         aleatorio[i] = vetor[i];
     }
-
 
     do{
         printf("\n Sua lista:\n");
@@ -38,15 +37,15 @@ void quicksort(int selecioneOperacao){
 
         // menu do quicksort
         printf("|------------------------------------------------|\n");
-        printf("| Ol·, o Quicksort È um algoritmo rapido e       |\n");
-        printf("| eficiente de ordenaÁ„o por divis„o e conquista |\n");
+        printf("| Ol√°, o Quicksort √© um algoritmo rapido e       |\n");
+        printf("| eficiente de ordena√ß√£o por divis√£o e conquista |\n");
         printf("|------------------------------------------------|\n");
         printf("| 1.Crescente                                    |\n");
         printf("| 2.Decrescente                                  |\n");
-        printf("| 3.AleatÛrio                                    |\n");
+        printf("| 3.Aleat√≥rio                                    |\n");
         printf("| 4.Voltar                                       |\n");
         printf("|------------------------------------------------|\n");
-        printf(" Selecione a operaÁ„o: ");
+        printf(" Selecione a opera√ß√£o: ");
         scanf("%d", &selecioneOperacao);
         printf("\n");
 
@@ -54,59 +53,18 @@ void quicksort(int selecioneOperacao){
             case 1:
                 //metodo crescente
                 printf("|------------------------|\n");
-                printf("| Deseja qual mÈtodo:    |\n");
+                printf("| Deseja qual m√©todo:    |\n");
                 printf("|------------------------|\n");
                 printf("| 1.Passo a Passo        |\n");
                 printf("| 2.Resultado final      |\n");
                 printf("| 3.Voltar               |\n");
                 printf("|------------------------|\n");
-                printf(" Selecione a operaÁ„o: ");
+                printf(" Selecione a opera√ß√£o: ");
                 scanf("%d", &selecioneMetodo);
                 printf("\n");
 
                 switch(selecioneMetodo){
-                    case 1:
-                        //metodo passo a passo
-                        funcaoQuicksortCrescentePassos(vetor, 0, tamanho - 1);
 
-                        system("pause");
-                        system("cls");
-                        break;
-                    case 2:
-
-                        //resultado final da lista ordenada
-                        funcaoQuicksortCrescente(vetor, 0, tamanho - 1);
-                        system("pause");
-                        system("cls");
-                        break;
-                    case 3:
-                        printf("========= VOLTANDO =========\n");
-                        sleep(1);
-                        system("cls");
-                        break;
-                    default:
-                        printf("=============================\n");
-                        printf("======OPERA«√O INVALIDA======\n");
-                        printf("=============================\n");
-                        system("cls");
-                        break;
-                }
-
-                break;
-            case 2:
-                //metodo decrescente
-                printf("|------------------------|\n");
-                printf("| Deseja qual mÈtodo:    |\n");
-                printf("|------------------------|\n");
-                printf("| 1.Passo a Passo        |\n");
-                printf("| 2.Resultado final      |\n");
-                printf("| 3.Voltar               |\n");
-                printf("|------------------------|\n");
-                printf(" Selecione a operaÁ„o: ");
-                scanf("%d", &selecioneMetodo);
-                printf("\n");
-
-                switch(selecioneMetodo){
                     case 1:
                         //metodo passo a passo
 
@@ -114,11 +72,11 @@ void quicksort(int selecioneOperacao){
                         printf("| Deseja qual passo do programa:    |\n");
                         printf("|-----------------------------------|\n");
                         printf("| 1.Escolha do pivo                 |\n");
-                        printf("| 2.SequÍncia particionada          |\n");
+                        printf("| 2.Sequ√™ncia particionada          |\n");
                         printf("| 3.Exemplo                         |\n");
                         printf("| 4.Voltar                          |\n");
                         printf("|-----------------------------------|\n");
-                        printf(" Selecione a operaÁ„o: ");
+                        printf(" Selecione a opera√ß√£o: ");
                         scanf("%d", &selecioneMetodo);
                         printf("\n");
 
@@ -140,45 +98,153 @@ void quicksort(int selecioneOperacao){
                         printf("|------------------------------------------------------|\n");
                         switch(selecioneMetodo){
                             case 1:
-                                printf("| No mÈtodo de particionamento primeior deve escolher  |\n");
-                                printf("| um elemento para se chamar de pivÙ.                  |\n");
-                                printf("| O pivÙ da lista ser· o %d e iremos comparar todos os |\n", vetor[tamanho - 1]);
+                                printf("| No m√©todo de particionamento primeior deve escolher  |\n");
+                                printf("| um elemento para se chamar de piv√¥.                  |\n");
+                                printf("| O piv√¥ da lista ser√° o %d e iremos comparar todos os |\n", vetor[tamanho - 1]);
                                 printf("| elementos da esquerda.                               |\n");
                                 printf("|                                                      |\n");
 
 
                             case 2:
 
-                                printf("| Para saber qual elemento j· trocamos, devemos manter |\n");
-                                printf("| uma vari·vel i, que nos permite controlar quais      |\n");
-                                printf("| elementos j· foram trocados, da esquerda para        |\n");
-                                printf("| esquerda para direita. Ao final de toda a interaÁ„o  |\n");
-                                printf("| da sequÍncia, pegamos nosso pivÙ e trocamos com a    |\n");
-                                printf("| posiÁ„o atual da vari·vel i.                         |\n");
+                                printf("| Para saber qual elemento j√° trocamos, devemos manter |\n");
+                                printf("| uma vari√°vel i, que nos permite controlar quais      |\n");
+                                printf("| elementos j√° foram trocados, da esquerda para        |\n");
+                                printf("| esquerda para direita. Ao final de toda a intera√ß√£o  |\n");
+                                printf("| da sequ√™ncia, pegamos nosso piv√¥ e trocamos com a    |\n");
+                                printf("| posi√ß√£o atual da vari√°vel i.                         |\n");
                                 printf("|                                                      |\n");
 
                             case 3:
 
                                 printf("| Exemplo:                                             |\n");
                                 printf("|                     [5, 1, 4, 2, 3]                  |\n");
-                                printf("| partiÁao()------------------------------             |\n");
-                                printf("| 5 <= 3? continua    [5, 1, 4, 2, 3]   interaÁ„o 0    |\n");
-                                printf("| 1 <= 3? troque(5,1) [1, 5, 4, 2, 3]   interaÁ„o 1    |\n");
-                                printf("| 4 <= 4? continua    [1, 5, 4, 2, 3]   interaÁ„o 2    |\n");
-                                printf("| 2 <= 3? troque(5,2) [1, 2, 4, 5, 3]   interaÁ„o 3    |\n");
-                                printf("|     troque(i, pivÙ) [1, 2, 3, 5, 4]   fim interaÁ„o  |\n");
+                                printf("| parti√ßao()------------------------------             |\n");
+                                printf("| 5 <= 3? continua    [5, 1, 4, 2, 3]   intera√ß√£o 0    |\n");
+                                printf("| 1 <= 3? troque(5,1) [1, 5, 4, 2, 3]   intera√ß√£o 1    |\n");
+                                printf("| 4 <= 4? continua    [1, 5, 4, 2, 3]   intera√ß√£o 2    |\n");
+                                printf("| 2 <= 3? troque(5,2) [1, 2, 4, 5, 3]   intera√ß√£o 3    |\n");
+                                printf("|     troque(i, piv√¥) [1, 2, 3, 5, 4]   fim intera√ß√£o  |\n");
+                                printf("|                                                      |\n");
+                                printf("|------------------------------------------------------|\n");
+
+                                interacao = 0;
+                                funcaoQuicksortCrescentePassos(vetor, 0, tamanho - 1);
+                                printf("|------------------------------------------------------|\n");
+
+                                break;
+                        }
+
+                        system("pause");
+                        system("cls");
+                        break;
+                    case 2:
+
+                        //resultado final da lista ordenada
+                        funcaoQuicksortCrescente(vetor, 0, tamanho - 1);
+                        system("pause");
+                        system("cls");
+                        break;
+                    case 3:
+                        printf("========= VOLTANDO =========\n");
+                        sleep(1);
+                        system("cls");
+                        break;
+                    default:
+                        printf("=============================\n");
+                        printf("======OPERA√á√ÉO INVALIDA======\n");
+                        printf("=============================\n");
+                        system("cls");
+                        break;
+                }
+
+                break;
+            case 2:
+                //metodo decrescente
+                printf("|------------------------|\n");
+                printf("| Deseja qual m√©todo:    |\n");
+                printf("|------------------------|\n");
+                printf("| 1.Passo a Passo        |\n");
+                printf("| 2.Resultado final      |\n");
+                printf("| 3.Voltar               |\n");
+                printf("|------------------------|\n");
+                printf(" Selecione a opera√ß√£o: ");
+                scanf("%d", &selecioneMetodo);
+                printf("\n");
+
+                switch(selecioneMetodo){
+                    case 1:
+                        //metodo passo a passo
+
+                        system("cls");
+
+                        printf("|-----------------------------------|\n");
+                        printf("| Deseja qual passo do programa:    |\n");
+                        printf("|-----------------------------------|\n");
+                        printf("| 1.Escolha do pivo                 |\n");
+                        printf("| 2.Sequ√™ncia particionada          |\n");
+                        printf("| 3.Exemplo                         |\n");
+                        printf("| 4.Voltar                          |\n");
+                        printf("|-----------------------------------|\n");
+                        printf(" Selecione a opera√ß√£o: ");
+                        scanf("%d", &selecioneMetodo);
+                        printf("\n");
+
+                        system("cls");
+
+                        printf("\n Sua lista:\n");
+
+                        for(int i = 0; i < tamanho; i++){// formatar lista na tela
+                            if(i == 0)
+                                printf(" [");
+                            printf("%d", vetor[i]);
+                            if(i < tamanho - 1)
+                                printf(", ");
+                            if(i == tamanho - 1)
+                                printf("]\n");
+                        }
+                        printf("\n");
+
+                        printf("|------------------------------------------------------|\n");
+                        switch(selecioneMetodo){
+                            case 1:
+                                printf("| No m√©todo de particionamento primeior deve escolher  |\n");
+                                printf("| um elemento para se chamar de piv√¥.                  |\n");
+                                printf("| O piv√¥ da lista ser√° o %d e iremos comparar todos os |\n", vetor[tamanho - 1]);
+                                printf("| elementos da esquerda.                               |\n");
+                                printf("|                                                      |\n");
+
+
+                            case 2:
+
+                                printf("| Para saber qual elemento j√° trocamos, devemos manter |\n");
+                                printf("| uma vari√°vel i, que nos permite controlar quais      |\n");
+                                printf("| elementos j√° foram trocados, da esquerda para        |\n");
+                                printf("| esquerda para direita. Ao final de toda a intera√ß√£o  |\n");
+                                printf("| da sequ√™ncia, pegamos nosso piv√¥ e trocamos com a    |\n");
+                                printf("| posi√ß√£o atual da vari√°vel i.                         |\n");
+                                printf("|                                                      |\n");
+
+                            case 3:
+
+                                printf("| Exemplo:                                             |\n");
+                                printf("|                     [5, 1, 4, 2, 3]                  |\n");
+                                printf("| parti√ßao()------------------------------             |\n");
+                                printf("| 5 <= 3? continua    [5, 1, 4, 2, 3]   intera√ß√£o 0    |\n");
+                                printf("| 1 <= 3? troque(5,1) [1, 5, 4, 2, 3]   intera√ß√£o 1    |\n");
+                                printf("| 4 <= 4? continua    [1, 5, 4, 2, 3]   intera√ß√£o 2    |\n");
+                                printf("| 2 <= 3? troque(5,2) [1, 2, 4, 5, 3]   intera√ß√£o 3    |\n");
+                                printf("|     troque(i, piv√¥) [1, 2, 3, 5, 4]   fim intera√ß√£o  |\n");
                                 printf("|                                                      |\n");
                                 printf("|------------------------------------------------------|\n");
 
                                 interacao = 0;
 
                                 funcaoQuicksortDecrescentePassos(vetor, 0, tamanho -1);
+                                printf("|------------------------------------------------------|\n");
 
                                 break;
-
-
                         }
-
 
                         system("pause");
                         system("cls");
@@ -197,7 +263,7 @@ void quicksort(int selecioneOperacao){
                         break;
                     default:
                         printf("=============================\n");
-                        printf("======OPERA«√O INVALIDA======\n");
+                        printf("======OPERA√á√ÉO INVALIDA======\n");
                         printf("=============================\n");
                         system("cls");
                         break;
@@ -237,7 +303,7 @@ void quicksort(int selecioneOperacao){
                 break;
             default:
                 printf("=============================\n");
-                printf("======OPERA«√O INVALIDA======\n");
+                printf("======OPERA√á√ÉO INVALIDA======\n");
                 printf("=============================\n");
                 system("cls");
                 break;
@@ -251,12 +317,12 @@ void quicksort(int selecioneOperacao){
 void heapsort(int selecioneOperacao){
     int tamanho, selecioneMetodo;
 
-    printf("Qual È o tamanho da lista que deseja:");//digitar o tamanho da lista
+    printf("Qual √© o tamanho da lista que deseja:");//digitar o tamanho da lista
     scanf("%d", &tamanho);
 
     int vetor[tamanho], aleatorio[tamanho];
 
-    srand(time(NULL));//gerar numeros aleatorios em funÁ„o do horario
+    srand(time(NULL));//gerar numeros aleatorios em fun√ß√£o do horario
 
     for(int i = 0; i < tamanho; i++){
         vetor[i] = rand() % 100; //numeros de 0 ate 100
@@ -280,15 +346,15 @@ void heapsort(int selecioneOperacao){
 
         //menu do heapsort
         printf("|------------------------------------------------|\n");
-        printf("| Ol·, o Heapsort È um algoritmo generalista     |\n");
-        printf("| que ordena os elementos ‡ medida que os insere |\n");
+        printf("| Ol√°, o Heapsort √© um algoritmo generalista     |\n");
+        printf("| que ordena os elementos √† medida que os insere |\n");
         printf("|------------------------------------------------|\n");
         printf("| 1.Crescente                                    |\n");
         printf("| 2.Decrescente                                  |\n");
-        printf("| 3.AleatÛrio                                    |\n");
+        printf("| 3.Aleat√≥rio                                    |\n");
         printf("| 4.Voltar                                       |\n");
         printf("|------------------------------------------------|\n");
-        printf(" Selecione a operaÁ„o: ");
+        printf(" Selecione a opera√ß√£o: ");
         scanf("%d", &selecioneOperacao);
         printf("\n");
 
@@ -296,13 +362,13 @@ void heapsort(int selecioneOperacao){
             case 1:
                 //metodo crescente
                 printf("|------------------------|\n");
-                printf("| Deseja qual mÈtodo:    |\n");
+                printf("| Deseja qual m√©todo:    |\n");
                 printf("|------------------------|\n");
                 printf("| 1.Passo a Passo        |\n");
                 printf("| 2.Resultado final      |\n");
                 printf("| 3.Voltar               |\n");
                 printf("|------------------------|\n");
-                printf(" Selecione a operaÁ„o: ");
+                printf(" Selecione a opera√ß√£o: ");
                 scanf("%d", &selecioneMetodo);
                 printf("\n");
 
@@ -314,6 +380,9 @@ void heapsort(int selecioneOperacao){
                         break;
                     case 2:
                         //resultado final da lista ordenada
+
+                        heapsortCrescente(vetor, tamanho);
+
                         system("pause");
                         system("cls");
                         break;
@@ -324,7 +393,7 @@ void heapsort(int selecioneOperacao){
                         break;
                     default:
                         printf("=============================\n");
-                        printf("===== OPERA«√O INV¡LIDA =====\n");
+                        printf("===== OPERA√á√ÉO INV√ÅLIDA =====\n");
                         printf("=============================\n");
                         system("cls");
                         break;
@@ -333,13 +402,13 @@ void heapsort(int selecioneOperacao){
             case 2:
                 //metodo decrescente
                 printf("|------------------------|\n");
-                printf("| Deseja qual mÈtodo:    |\n");
+                printf("| Deseja qual m√©todo:    |\n");
                 printf("|------------------------|\n");
                 printf("| 1.Passo a Passo        |\n");
                 printf("| 2.Resultado final      |\n");
                 printf("| 3.Voltar               |\n");
                 printf("|------------------------|\n");
-                printf(" Selecione a operaÁ„o: ");
+                printf(" Selecione a opera√ß√£o: ");
                 scanf("%d", &selecioneMetodo);
                 printf("\n");
 
@@ -351,6 +420,9 @@ void heapsort(int selecioneOperacao){
                         break;
                     case 2:
                         //resultado final da lista ordenada
+
+                        heapsortDecrescente(vetor, tamanho);
+
                         system("pause");
                         system("cls");
                         break;
@@ -361,7 +433,7 @@ void heapsort(int selecioneOperacao){
                         break;
                     default:
                         printf("=============================\n");
-                        printf("===== OPERA«√O INV¡LIDA =====\n");
+                        printf("===== OPERA√á√ÉO INV√ÅLIDA =====\n");
                         printf("=============================\n");
                         system("cls");
                         break;
@@ -400,9 +472,9 @@ void heapsort(int selecioneOperacao){
                 system("cls");
                 break;
             default:
-                //erro na digitaÁ„o
+                //erro na digita√ß√£o
                 printf("=============================\n");
-                printf("===== OPERA«√O INV¡LIDA =====\n");
+                printf("===== OPERA√á√ÉO INV√ÅLIDA =====\n");
                 printf("=============================\n");
                 system("cls");
                 break;
@@ -416,7 +488,7 @@ int divisaoCrescente(int vetor[], int primeiro, int ultimo) {
     int cabeca = vetor[ultimo];
     int i = primeiro - 1;
 
-    for(int j = primeiro; j <= ultimo - 1; j++) { // CorreÁ„o no loop
+    for(int j = primeiro; j <= ultimo - 1; j++) { // Corre√ß√£o no loop
         if(vetor[j] <= cabeca) {
             i++;
             temp = vetor[i];
@@ -446,15 +518,19 @@ void funcaoQuicksortCrescentePassos(int vetor[], int primeiro, int ultimo) {
     if(primeiro < ultimo) {
     int indiceCabeca = divisaoCrescente(vetor, primeiro, ultimo);
 
-    for(int i = 0; i < tamanho; i++){// formatar lista na tela
-        if(i == 0)
-            printf(" [");
-        printf("%d", vetor[i]);
-        if(i < tamanho - 1)
-            printf(", ");
-        if(i == tamanho - 1)
-            printf("]\n");
-    }
+    printf("| %d <= %d? ", indiceCabeca, ultimo);
+        interacao++;
+
+        for(int i = 0; i < tamanho; i++){// formatar lista na tela
+
+            if(i == 0)
+                printf(" [");
+            printf("%d", vetor[i]);
+            if(i < tamanho - 1)
+                printf(", ");
+            if(i == tamanho - 1)
+                printf("]   Intera√ß√£o %d\n", interacao);
+        }
 
     funcaoQuicksortCrescentePassos(vetor, primeiro, indiceCabeca - 1);
     funcaoQuicksortCrescentePassos(vetor, indiceCabeca + 1, ultimo);
@@ -508,7 +584,7 @@ void funcaoQuicksortDecrescentePassos(int vetor[], int primeiro, int ultimo) {
             if(i < tamanho - 1)
                 printf(", ");
             if(i == tamanho - 1)
-                printf("]   InteraÁ„o %d\n", interacao);
+                printf("]   Intera√ß√£o %d\n", interacao);
         }
 
         funcaoQuicksortDecrescentePassos(vetor, primeiro, indiceCabeca - 1);
@@ -547,8 +623,8 @@ void heapsortCrescente(int a[], int n) {
 
 void heapify(int a[], int n, int i) {
     int menor = i;      // Inicializar o menor como a raiz
-    int esquerda = 2 * i + 1; // Õndice do filho esquerdo
-    int direita = 2 * i + 2; // Õndice do filho direito
+    int esquerda = 2 * i + 1; // √çndice do filho esquerdo
+    int direita = 2 * i + 2; // √çndice do filho direito
 
     // Se o filho esquerdo for menor que o pai, atualize o menor
     if (esquerda < n && a[esquerda] < a[menor]) {
@@ -560,26 +636,26 @@ void heapify(int a[], int n, int i) {
         menor = direita;
     }
 
-    // Se o menor n„o for a raiz, troque-os
+    // Se o menor n√£o for a raiz, troque-os
     if (menor != i) {
         int temp = a[i];
         a[i] = a[menor];
         a[menor] = temp;
 
-        // Chame heapify recursivamente no sub-·rvore afetado
+        // Chame heapify recursivamente no sub-√°rvore afetado
         heapify(a, n, menor);
     }
 }
 
 void heapsortDecrescente(int a[], int n) {
-    // Construir um heap mÌnimo
+    // Construir um heap m√≠nimo
     for (int i = n / 2 - 1; i >= 0; i--) {
         heapify(a, n, i);
     }
 
-    // Extrair elementos do heap e coloc·-los na posiÁ„o correta
+    // Extrair elementos do heap e coloc√°-los na posi√ß√£o correta
     for (int i = n - 1; i >= 0; i--) {
-        // Trocar o elemento raiz (mÌnimo) com o ˙ltimo elemento n„o ordenado
+        // Trocar o elemento raiz (m√≠nimo) com o √∫ltimo elemento n√£o ordenado
         int temp = a[0];
         a[0] = a[i];
         a[i] = temp;
@@ -605,7 +681,7 @@ int main(){
         printf("| 2.Heapsort                |\n");
         printf("| 3.Sair                    |\n");
         printf("|---------------------------|\n");
-        printf(" Selecione a operaÁ„o: ");
+        printf(" Selecione a opera√ß√£o: ");
         scanf("%d", &selecioneOperacao);
         printf("\n");
         printf("========== AGUARDE ==========\n");
@@ -641,7 +717,7 @@ int main(){
             default:
                 //erro ao digitar
                 printf("================================\n");
-                printf("======= OPERA«√O INV¡LIDA ======\n");
+                printf("======= OPERA√á√ÉO INV√ÅLIDA ======\n");
                 printf("================================\n");
                 system("cls");
 
@@ -650,3 +726,4 @@ int main(){
 
     return 0;
 }
+
